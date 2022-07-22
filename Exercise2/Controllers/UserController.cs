@@ -90,7 +90,8 @@ namespace EmployeeManagerment.Controllers
         [HttpDelete("delete-order")]
         public async Task<IActionResult> DeleteOrder(int orderId)
         {
-            string token = await HttpContext.GetTokenAsync("access_token"); 
+            string token = await HttpContext.GetTokenAsync("access_token");
+            string token1 = await HttpContext.GetTokenAsync("access_token");
             var result = await UserService.DeleteOrder(orderId);
             return Ok(result);
         }
