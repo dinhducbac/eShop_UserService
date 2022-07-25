@@ -27,4 +27,4 @@ jobs:
           context: ./Exercise2
 #           file: ./Dockerfile
           push: true
-          tags: eshop-user-service:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/eshop-user-service:latest
