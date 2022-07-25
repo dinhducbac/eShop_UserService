@@ -14,7 +14,9 @@ jobs:
 
     steps:
      - name: Check out code
-       uses: actions/checkout@v2
+       uses: actions/checkout@v3
         
      - name: Build frontend image
-       run: docker image build -t image .
+       run:
+          cd D:\\.Net_Core_Exercises\\eShopService\\eShop_UserService\\Exercise2
+          docker image build -t image .
