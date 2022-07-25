@@ -1,5 +1,9 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
+# Add a new comment to trigger build.
+# basic nginx dockerfile starting with Ubuntu 20.04
+FROM ubuntu:20.04
+RUN apt-get -y update
+RUN apt-get -y install nginx
 FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
