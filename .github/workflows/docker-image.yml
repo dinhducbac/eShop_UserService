@@ -28,6 +28,8 @@ jobs:
 #           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/eshop-user-service:latest
+    - name: Docker Image Artifact Download
+      uses: ishworkh/docker-image-artifact-download@v1
     - name: Download image
       uses: ishworkh/docker-image-artifact-download@v1
       with:
