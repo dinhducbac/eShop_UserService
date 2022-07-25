@@ -19,9 +19,8 @@ jobs:
     - name: Login to DockerHub
       uses: docker/login-action@v2
       with:
-          repository: ${{ github.repository }}
-          registry: registry-1.docker.io
-          tag_with_ref: true
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build and push
       uses: docker/build-push-action@v3
       with:
