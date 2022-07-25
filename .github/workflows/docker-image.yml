@@ -17,6 +17,6 @@ jobs:
        uses: actions/checkout@v3
         
      - name: Build frontend image
-       run:
-          cd D:\\.Net_Core_Exercises\\eShopService\\eShop_UserService\\Exercise2
-          docker image build -t image .
+       run: cd D:\\.Net_Core_Exercises\\eShopService\\eShop_UserService\\Exercise2
+     - name: Build frontend image 1
+       run: docker image build -t image .
