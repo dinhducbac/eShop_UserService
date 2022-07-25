@@ -82,7 +82,7 @@ namespace EmployeeManagerment.Controllers
         [HttpGet("get-order")]
         public async Task<IActionResult> GetOrder()
         {
-            string token = await HttpContext.GetTokenAsync("access_token");
+            string token = await HttpContext.GetTokenAsync("access_token"); ;
             var result = await UserService.GetOrder(token);
             return Ok(result);
         }
