@@ -16,7 +16,7 @@ jobs:
      - name: Check out code
        uses: actions/checkout@v2
      - name: Build frontend image
-       run: docker image build -t image .
+       run: docker image build -t image ./Exercise2
      - name: Push frontend image
        uses: elgohr/Publish-Docker-Github-Action@2.14
        with:
